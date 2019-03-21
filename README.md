@@ -23,8 +23,8 @@ Through optimized algorithms design, modular programmatic complexity, and access
 * [x] ~~Can enter custom genomic data in string format.~~
 * [x] ~~Can process genomic data using up to one algorithm.~~
 * [x] ~~Can receive processed results as response on the web page.~~
-* [ ] Can process genomic data with up to three algorithms.
-* [ ] Can process genomic data with up to five algorithms.
+* [x] ~~Can process genomic data with up to three algorithms.~~
+* [x] ~~Can process genomic data with up to five algorithms.~~
 * [ ] Can process genomic data with up to ten algorithms.
 * [ ] Can process genomic data with up to fifteen algorithms.
 * [ ] Can process genomic data with up to twenty algorithms.
