@@ -40,11 +40,11 @@ The content of this project itself and the source code used to format and displa
 
 ## Acknowledgements
 
-Thanks to **Alan Davis** (@neptunius) for advising the project's development from inception to actualization. 
+Thanks to **Alan Davis** ([@neptunius](https://github.com/neptunius)) for advising the project's development from inception to actualization. 
 
-Thanks to **Wenzel Lowe** (@lowewenzel) for designing the project's current logo(s).
+Thanks to **Wenzel Lowe** ([@lowewenzel](https://github.com/lowewenzel)) for designing the project's current logo(s).
 
-Special thanks to **Make School** and their **Product College** program for fostering personal growth and development in the realms of full-stack Python development, elementary computer science, and data science/engineering. 
+Special thanks to [**Make School**](https://www.makeschool.com/) and their [**Product College**](https://www.makeschool.com/computer-science/academics) program for fostering personal growth and development in the realms of full-stack Python development, elementary computer science, and data science/engineering. 
 
 ## Credits
 
