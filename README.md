@@ -12,7 +12,7 @@
 
 ## Description
 
-The **HELiCAL** project is a _bioinformatics-based utility_ - designed for front-end and command-line usage - for biologists and technologists alike. 
+The **HELiCAL** project is a _bioinformatics-based utility_ - designed as a web app/utility - for biologists and technologists to work with biological data. 
 
 The intent of the project is to provide basic, intermediate, and advanced _algorithmic operations for genomic data processing_ in an optimized and user-friendly manner. 
 
