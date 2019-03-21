@@ -1,6 +1,30 @@
 <!-- TEMPLATE TO ALLOW USER TO INPUT GENOME DATA IN FRONT PAGE FOR ANALYSIS -->
 
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/main.css') }}">
+
 <form method="POST">
-    <input type="text" placeholder="Enter a genome sequence here (ACGT)." name="proc01">
+    <title>Count Nucleotides in DNA Sequence.</title>
+    <input type="text" placeholder="Enter DNA sequence here (ACGT)." class="user-input-box" name="proc01">
+    <input type="submit" value="Get Nucleotide Count">
+</form>
+
+<form method="POST">
+    <title></title>
+    <input type="text" placeholder="Enter DNA sequence here (ACGT)." name="proc02">
+    <input type="submit">
+</form>
+
+<form method="POST">
+    <input type="text" placeholder="Enter DNA sequence here (ACGT)." name="proc03">
+    <input type="submit">
+</form>
+
+<form method="POST">
+    <input type="text" placeholder="Enter DNA sequence here (ACGT)." name="proc04">
+    <input type="submit">
+</form>
+
+<form method="POST">
+    <input type="text" placeholder="Enter DNA sequence here (ACGT)." name="proc05">
     <input type="submit">
 </form>
