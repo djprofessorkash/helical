@@ -11,7 +11,7 @@ DATE LAST MODIFIED:     Wednesday, March 20, 2019
 from flask import Flask, request, render_template
 
 # Imports Custom Algorithm Structures for Data Processing
-from .structures import processor01, processor02, processor03, processor04
+from .structures import processor01, processor02, processor03, processor04, processor05
 
 # Initializes Flask App
 app = Flask(__name__)
@@ -26,10 +26,11 @@ def user_form():
 def user_form_proc():
     # NOTE: PROCESSORS values reflect the _value_ tags in the HTML button elements in ./templates/input-data.html.
     PROCESSORS = {
-        1: "Get Nucleotide Count",
-        2: "Convert to RNA",
-        3: "Generate Reverse Complement",
-        4: "Determine GC Content"
+        1: "Get Nucleotide Count",              # P01: DNA
+        2: "Convert to RNA",                    # P02: RNA
+        3: "Generate Reverse Complement",       # P03: REVC
+        4: "Determine GC Content",              # P05: GC
+        5: "Translate to Protein Chain"         # P08: PROT
     }
     if request.form["proc"] == PROCESSORS[1]:
         if request.form["proc01"]:
@@ -59,9 +60,9 @@ def user_form_proc():
             return proc04.render_response(proc04.gc_content_calculator())
         else:
             return "ERROR: GC-Content Calculation Processor did not receive any data."
-    # elif request.form["proc"] == PROCESSORS[5]:
-    #     if request.form["proc05"]:
-    #         # process 5
-    #         pass
-    #     else:
-    #         return "ERROR: ..."
+    elif request.form["proc"] == PROCESSORS[5]:
+        if request.form["proc05"]:
+            text05 = request.form["proc05"].upper()
+            preproc05 = processor02.Processor02_DNATransriber(text05)
+            proc05 = processor05.Processor05_ProteinTranslator(preproc05.transcriber())
+            return proc05.render_response(proc05.rna_to_protein_translator())
