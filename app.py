@@ -11,7 +11,7 @@ DATE LAST MODIFIED:     Wednesday, March 20, 2019
 from flask import Flask, request, render_template
 
 # Imports Custom Algorithm Structures for Data Processing
-from .structures import processor01, processor02, processor03
+from .structures import processor01, processor02, processor03, processor04
 
 # Initializes Flask App
 app = Flask(__name__)
@@ -28,7 +28,8 @@ def user_form_proc():
     PROCESSORS = {
         1: "Get Nucleotide Count",
         2: "Convert to RNA",
-        3: "Generate Reverse Complement"
+        3: "Generate Reverse Complement",
+        4: "Determine GC Content"
     }
     if request.form["proc"] == PROCESSORS[1]:
         if request.form["proc01"]:
@@ -51,12 +52,13 @@ def user_form_proc():
             return proc03.render_response(proc03.reverse_complement_generator())
         else:
             return "ERROR: Reverse Complement Processor did not receive any data."
-    # elif request.form["proc"] == PROCESSORS[4]:
-    #     if request.form["proc04"]:
-    #         # process 4
-    #         pass
-    #     else:
-    #         return "ERROR: ..."
+    elif request.form["proc"] == PROCESSORS[4]:
+        if request.form["proc04"]:
+            text04 = request.form["proc04"].upper()
+            proc04 = processor04.Processor04_GCContent(text04)
+            return proc04.render_response(proc04.gc_content_calculator())
+        else:
+            return "ERROR: GC-Content Calculation Processor did not receive any data."
     # elif request.form["proc"] == PROCESSORS[5]:
     #     if request.form["proc05"]:
     #         # process 5
