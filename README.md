@@ -1,5 +1,4 @@
 <h1 align="center">The HELiCAL Project</h1>
----
 <p align="center">
     <a href="/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"/></a>
     <a href="https://docs.python.org/3/index.html"><img src="https://img.shields.io/badge/python-3.6-blue.svg"/></a>
@@ -11,8 +10,6 @@
 
 ![logo](static/img/helical.png)
 
----
-
 ## Description
 
 The **HELiCAL** project is a _bioinformatics-based utility_ - designed for front-end and command-line usage - for biologists and technologists alike. 
@@ -21,20 +18,33 @@ The intent of the project is to provide basic, intermediate, and advanced _algor
 
 Through optimized algorithms design, modular programmatic complexity, and accessible code architectures, I aim to produce a _full-stack Python application_ that's open-source and serves an interesting and modern problem space. 
 
----
+## Features (User Stories)
+
+* [x] ~~Can enter custom genomic data in string format.~~
+* [x] ~~Can process genomic data using up to one algorithm.~~
+* [x] ~~Can receive processed results as response on the web page.~~
+* [ ] Can process genomic data with up to five algorithms.
+* [ ] Can process genomic data with up to ten algorithms.
+* [ ] Can process genomic data with up to twenty algorithms.
+* [ ] Can upload genomic data in file format.
+* [ ] Can receive processed results as returned file format.
 
 ## Dependencies
 
 * [PEP8](http://pep8.readthedocs.io/en/release-1.7.x/)
 * [Flask](https://github.com/pallets/flask)
 
----
-
 ## License
 
 The content of this project itself and the source code used to format and display that content are both licensed under the MIT license.
 
----
+## Acknowledgements
+
+Thanks to **Alan Davis** (@neptunius) for advising the project's development from inception to actualization. 
+
+Thanks to **Wenzel Lowe** (@lowewenzel) for designing the project's current logo(s).
+
+Special thanks to **Make School** and their **Product College** program for fostering personal growth and development in the realms of full-stack Python development, elementary computer science, and data science/engineering. 
 
 ## Credits
 
