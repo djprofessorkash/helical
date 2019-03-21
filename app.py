@@ -11,8 +11,7 @@ DATE LAST MODIFIED:     Wednesday, March 20, 2019
 from flask import Flask, request, render_template
 
 # Imports Custom Algorithm Structures for Data Processing
-# from .structures import processor01
-from .structures import processor01
+from .structures import processor01, processor02
 
 # Initializes Flask App
 app = Flask(__name__)
@@ -24,7 +23,14 @@ def user_form():
 
 # Creates POST Route at Home Page with User Data Processing
 @app.route("/", methods=["POST"])
-def user_form_POST():
-    text = request.form["proc01"]
-    proc01 = processor01.Processor01_NucleotideCounter(text)
+def user_form_proc01():
+    text01 = request.form["proc01"]
+    proc01 = processor01.Processor01_NucleotideCounter(text01)
     return proc01.render_response(proc01.nucleotide_counter())
+
+    # text02 = request.form["proc02"]
+    # proc02 = processor02.Processor02_DNATransriber(text02)
+    # return proc02.render_response(proc02.transcriber())
+
+# @app.route("/", methods=["POST"])
+# def user_form_proc02():
