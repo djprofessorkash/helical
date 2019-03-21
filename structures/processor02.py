@@ -5,7 +5,7 @@ AUTHOR:                 Aakash "Kash" Sudhakar
 DESCRIPTION:            Second algorithm structure for HELiCAL project data processing. 
                         Processor 02 enables conversion (transcription) of DNA to RNA.
 DATE CREATED:           Wednesday, March 20, 2019
-DATE LAST MODIFIED:     Wednesday, March 20, 2019
+DATE LAST MODIFIED:     Thursday, March 21, 2019
 """
 
 class Processor02_DNATransriber(object):
@@ -14,7 +14,7 @@ class Processor02_DNATransriber(object):
         self.dataset = data
 
     def transcriber(self):
-        """ Method transcribes relevant DNA base pairs (Thymine) into RNA base pairs (Uracil). """
+        """ Method to transcribe relevant DNA base pairs (Thymine) into RNA base pairs (Uracil). """
         return "".join([[base, "U"][base == "T"] for base in self.dataset])
 
     def render_response(self, response):
