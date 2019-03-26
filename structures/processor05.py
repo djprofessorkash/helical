@@ -39,6 +39,7 @@ class Processor05_ProteinTranslator(object):
             if self.TRANSLATION_TABLE[codon] == "Stop":
                 return protein_seq
             protein_seq.append(self.TRANSLATION_TABLE[codon])
+        return protein_seq
     
     def render_response(self, response):
         """ Method to render stylized response text to user. """
